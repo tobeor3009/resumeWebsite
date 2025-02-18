@@ -5,19 +5,18 @@ import { SpanBoldInvert, SpanSemiBold, SpanBlue, SpanBadge } from "@/app/_compon
 import { PSubTitle } from "@/app/_components/single_element";
 export default function Resume() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center place-items-center
-                    min-h-screen p-8 pb-20 gap-16 sm:p-20 
-                    font-[family-name:var(--font-geist-sans)] text-lg">
+    <div className="min-h-screen p-40 gap-8 pb-20 sm:p-20 
+                    font-[family-name:var(--font-geist-sans)]">
       
-      <div className="w-full grid grid-cols-2 sm:grid-cols-1 gap-4 justify-between">
+      <div className="w-full grid grid-cols-1">
         <div className="flex text-center w-full sm:w-auto">
           <header className="text-center mb-8 mr-8">
-            <h1 className="text-3xl font-bold mt-4">{KoConfig.name}</h1>
+            <h1 className="text-3xl font-bold">{KoConfig.name}</h1>
             <p style={{ color: "var(--foreground-secondary)" }}>{KoConfig.title}</p>
           </header>
           <section className="grid grid-cols-1 text-left sm:w-auto">
-            <section className="grid grid-cols-2 text-left sm:w-auto ">
-              <div className="min-w-[120px] flex gap-4">
+            <section className="grid grid-cols-2 text-left sm:w-auto">
+              <div className="flex gap-4">
                 <IconLinkedIn url={KoConfig.linkedInUrl} className="rounded-md transition-all duration-300 hover:scale-150"/>
                 <IconGithub url={KoConfig.githubURL} className="rounded-md transition-all duration-300 hover:scale-150"/>
               </div>
@@ -28,7 +27,7 @@ export default function Resume() {
         </div>
       </div>
 
-      <section className="mt-8 mb-64 text-left w-full">
+      <section className="mt-8 mb-8 text-left w-full">
         <h1 className="border-b-4 pb-2 mb-4"><SpanBlue>About Me</SpanBlue></h1>
         <p className="mb-4 text-lg leading-relaxed">
         연구실에서 다양한 모델을 설계하고 직접 구현하여 <SpanBoldInvert>AI에 대한 깊은 이해</SpanBoldInvert>를 가지고 있습니다.
@@ -41,18 +40,18 @@ export default function Resume() {
         </p>
       </section>
 
-      <section className="mt-32 mb-64 text-left w-full">
+      <section className="mb-8 text-left w-full">
         <h2 className="border-b-4 pb-2 mb-4"><SpanBlue>Skills</SpanBlue></h2>
-          <div className="flex mb-8">
-            <PSubTitle className="w-[200px] mr-6">Machine Learning Frameworks</PSubTitle>
+          <div className="grid grid-cols-2 mb-8">
+            <PSubTitle className="mr-6">Machine Learning Frameworks</PSubTitle>
             <ul className="grid grid-cols-1 list-disc list-inside">
               <li className="text-lg ml-4">PyTorch (고급, Expert)</li>
               <li className="text-lg ml-4">Keras (중급, Proficient)</li>
               <li className="text-lg ml-4">TensorFlow (초급, Intermediate)</li>
             </ul>
           </div>
-          <div className="flex">
-            <PSubTitle className="w-[200px] mr-6">Programming Languages</PSubTitle>
+          <div className="grid grid-cols-2">
+            <PSubTitle className="mr-6">Programming Languages</PSubTitle>
             <ul className="list-disc list-inside text-xl leading-relaxed">
               <li className="text-lg ml-4">Python (고급, Expert)</li>
               <li className="text-lg ml-4">Javascript (초급, Intermediate)</li>
@@ -60,8 +59,8 @@ export default function Resume() {
               <li className="text-lg ml-4">SQL (초급, Intermediate)</li>
             </ul>
           </div>
-          <div className="flex">
-            <PSubTitle className="w-[200px] mr-6">Other Technical Tools</PSubTitle>
+          <div className="grid grid-cols-2">
+            <PSubTitle className="mr-6">Other Technical Tools</PSubTitle>
             <ul className="list-disc list-inside text-xl leading-relaxed">
               <li className="text-lg ml-4">Docker</li>
               <li className="text-lg ml-4">Kubernetes</li>
@@ -72,7 +71,7 @@ export default function Resume() {
           </div>
       </section>
 
-      <section className="mt-32 text-left w-full">
+      <section className="mb-8 text-left w-full">
         <h2 className="border-b-4 pb-2 mb-4"><SpanBlue>Area of Expertise</SpanBlue></h2>
         <h3 className="text-lg leading-relaxed">1. <SpanSemiBold>AI WorkFlow에 대한 총체적인 이해</SpanSemiBold>: AI WorkFlow의 전반을 모두 효율적으로 설계 및 구현 할 수 있습니다</h3>
         <h3 className="text-lg leading-relaxed">2. <SpanSemiBold>새로운 기술, Opensource에 대한 빠른 이해 및 적용</SpanSemiBold>: 새로운 tool과 오픈소스에 빠르게 적응, 분석하여 필요할때 빠르게 적용 할 수 있습니다.</h3>
@@ -85,6 +84,26 @@ export default function Resume() {
 
       <section className="text-left w-full">
         <h2 className="border-b-4 pb-2 mb-4"><SpanBlue>Degree</SpanBlue></h2>
+        <div className="flex mb-8">
+          <PSubTitle className="w-[200px] mr-6">울산대학교 대학원</PSubTitle>
+          <ul className="list-disc list-inside text-lg leading-relaxed">
+            <li className="ml-4">
+              <SpanSemiBold>Degree:</SpanSemiBold> 석사
+            </li>
+            <li className="ml-4">
+              <SpanSemiBold>Major / Minor:</SpanSemiBold> 의공학전공
+            </li>
+            <li className="ml-4">
+              <SpanSemiBold>Enrollment:</SpanSemiBold> 2021년 9월
+            </li>
+            <li className="ml-4">
+              <SpanSemiBold>Course work Completed:</SpanSemiBold> 2024년 2월
+            </li>
+            <li className="ml-4">
+              <SpanSemiBold>Status:</SpanSemiBold> 수료
+            </li>
+          </ul>
+        </div>
         <div className="flex mb-8">
           <PSubTitle className="w-[200px] mr-6">부산대학교</PSubTitle>
           <ul className="list-disc list-inside text-lg leading-relaxed">
@@ -105,29 +124,9 @@ export default function Resume() {
             </li>
           </ul>
         </div>
-          <div className="flex mb-8">
-            <PSubTitle className="w-[200px] mr-6">울산대학교 대학원</PSubTitle>
-            <ul className="list-disc list-inside text-lg leading-relaxed">
-              <li className="ml-4">
-                <SpanSemiBold>Degree:</SpanSemiBold> 석사
-              </li>
-              <li className="ml-4">
-                <SpanSemiBold>Major / Minor:</SpanSemiBold> 의공학전공
-              </li>
-              <li className="ml-4">
-                <SpanSemiBold>Enrollment:</SpanSemiBold> 2021년 9월
-              </li>
-              <li className="ml-4">
-                <SpanSemiBold>Course work Completed:</SpanSemiBold> 2024년 2월
-              </li>
-              <li className="ml-4">
-                <SpanSemiBold>Status:</SpanSemiBold> 수료
-              </li>
-            </ul>
-          </div>
       </section>
 
-      <section className="text-left w-full">
+      <section className="text-left w-full mb-8">
       <div className="flex grid-cols-2 border-b-4 justify-start items-center mb-4">
         <SpanBlue className="mr-2">경력</SpanBlue>
         <SpanBadge>총 5년 1개월</SpanBadge>
@@ -227,34 +226,33 @@ export default function Resume() {
       </section>
 
 
-      <div className="text-left w-full">
+      <div className="text-left w-full mb-8">
       <div className="flex border-b-4 justify-start items-center mb-4">
         <SpanBlue className="mr-2">EXPERIENCE</SpanBlue>
       </div>
-      <h2 className="text-xl font-semibold mb-2">이노룰스 (InnoRules)</h2>
-      <div className="flex grid-cols-2">
-          <PSubTitle className="w-[200px] text-right text-xl whitespace-pre-wrap mr-6"> 2020년 6월 ~<br />   2021년 5월</PSubTitle>
-          <PSubTitle className="text-base font-semibold">Development of InnoRPA</PSubTitle>
-      </div>
-      <div className="flex grid-cols-2">
-          <div className="w-[200px] mr-6"></div>
-            <ul className="list-disc list-inside ml-4 mb-4">
-              <li>Javascipt 기반 WebApp 개발 (Vue)</li>
-              <li>Keras 기반 Captcha Solver 개발</li>
-              <div className="flex">
-                <li className="whitespace-nowrap mr-2">Skills Used</li>
-                <SpanBadge className="text-xs mr-1">JavaScript</SpanBadge>
-                <SpanBadge className="text-xs mr-1">Vue</SpanBadge>
-                <SpanBadge className="text-xs mr-1">MongoDB</SpanBadge>
-                <SpanBadge className="text-xs mr-1">Linux</SpanBadge>
-                <SpanBadge className="text-xs mr-1">Keras</SpanBadge>
-              </div>
-            </ul>
-      </div>
-
       <section className="mb-16">
         <h2 className="text-xl font-semibold mb-2">아산병원 (Asan Medical Center)</h2>
         {[
+          {
+            title: "Skin Patch Extraction",
+            startDate: "2024년 12월",
+            endDate: "2025년 1월",
+            details: [
+              "CelebA-HQ에서 Skin Patch 추출, 데이터 제공",
+            ],
+            skills: ["Png", "Data-Preprocessing"],
+          },
+          {
+            title: "CT-Super Resolution",
+            team: "3명 (1 정형외과 의사, 2 Developer)",
+            startDate: "2023년 8월",
+            endDate: "현재",
+            details: [
+              "2D 기반 CT super resolution 모델 개발",
+              "Axial CT 데이터 추출, Ablation Study 및 평가",
+            ],
+            skills: ["PyTorch", "Pix2Pix", "DiffAE", "SimpleITK"],
+          },
           {
             title: "OCT Segmentation",
             team: "2명 (1 MD, 1 Developer)",
@@ -290,15 +288,13 @@ export default function Resume() {
             skills: ["Keras", "StarGAN", "SimpleITK"],
           },
           {
-            title: "CT-Super Resolution",
-            team: "3명 (1 정형외과 의사, 2 Developer)",
-            startDate: "2023년 8월",
-            endDate: "현재",
+            title: "Xray Bone Density Regression",
+            startDate: "2021년 6월",
+            endDate: "2022년 4월",
             details: [
-              "2D 기반 CT super resolution 모델 개발",
-              "Axial CT 데이터 추출, Ablation Study 및 평가",
+              "Xray 기반 Bone Density 예측, Label Distribution Learning 적용",
             ],
-            skills: ["PyTorch", "Pix2Pix", "DiffAE", "SimpleITK"],
+            skills: ["Xray", "PyTorch", "Regression"],
           },
           {
             title: "LVI Patch Classification",
@@ -309,24 +305,6 @@ export default function Resume() {
               "병리 이미지 기반 암 중증도 판별 모델 구현",
             ],
             skills: ["Pathology", "Keras", "Classification"],
-          },
-          {
-            title: "Xray Bone Density Regression",
-            startDate: "2021년 6월",
-            endDate: "2022년 4월",
-            details: [
-              "Xray 기반 Bone Density 예측, Label Distribution Learning 적용",
-            ],
-            skills: ["Xray", "PyTorch", "Regression"],
-          },
-          {
-            title: "Skin Patch Extraction",
-            startDate: "2024년 12월",
-            endDate: "2025년 1월",
-            details: [
-              "CelebA-HQ에서 Skin Patch 추출, 데이터 제공",
-            ],
-            skills: ["Png", "Data-Preprocessing"],
           },
         ].map((item, index) => (
           <div key={index}>
@@ -351,6 +329,26 @@ export default function Resume() {
           </div>
         ))}
       </section>
+      <h2 className="text-xl font-semibold mb-2">이노룰스 (InnoRules)</h2>
+      <div className="flex grid-cols-2">
+          <PSubTitle className="w-[200px] text-right text-xl whitespace-pre-wrap mr-6"> 2020년 6월 ~<br />   2021년 5월</PSubTitle>
+          <PSubTitle className="text-base font-semibold">Development of InnoRPA</PSubTitle>
+      </div>
+      <div className="flex grid-cols-2">
+          <div className="w-[200px] mr-6"></div>
+            <ul className="list-disc list-inside ml-4 mb-4">
+              <li>Javascipt 기반 WebApp 개발 (Vue)</li>
+              <li>Keras 기반 Captcha Solver 개발</li>
+              <div className="flex">
+                <li className="whitespace-nowrap mr-2">Skills Used</li>
+                <SpanBadge className="text-xs mr-1">JavaScript</SpanBadge>
+                <SpanBadge className="text-xs mr-1">Vue</SpanBadge>
+                <SpanBadge className="text-xs mr-1">MongoDB</SpanBadge>
+                <SpanBadge className="text-xs mr-1">Linux</SpanBadge>
+                <SpanBadge className="text-xs mr-1">Keras</SpanBadge>
+              </div>
+            </ul>
+      </div>
     </div>
 
     </div>
