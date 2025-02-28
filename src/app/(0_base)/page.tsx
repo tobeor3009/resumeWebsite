@@ -5,17 +5,17 @@ import { SpanBoldInvert, SpanSemiBold, SpanBlue, SpanBadge } from "@/app/_compon
 import { PSubTitle } from "@/app/_components/single_element";
 export default function Resume() {
   return (
-    <div className="min-h-screen p-40 gap-8 pb-20 sm:p-20 
+    <div className="min-h-screen p-5 sm:p-40 gap-8 pb-20 w-full
                     font-[family-name:var(--font-geist-sans)]">
       
       <div className="w-full grid grid-cols-1">
-        <div className="flex text-center w-full sm:w-auto">
+        <div className="flex text-center w-full">
           <header className="text-center mb-8 mr-8">
             <h1 className="text-3xl font-bold">{KoConfig.name}</h1>
             <p style={{ color: "var(--foreground-secondary)" }}>{KoConfig.title}</p>
           </header>
-          <section className="grid grid-cols-1 text-left sm:w-auto">
-            <section className="grid grid-cols-2 text-left sm:w-auto">
+          <section className="grid grid-cols-1 text-left w-full">
+            <section className="grid grid-cols-2 text-left w-full">
               <div className="flex gap-4">
                 <IconLinkedIn url={KoConfig.linkedInUrl} className="rounded-md transition-all duration-300 hover:scale-150"/>
                 <IconGithub url={KoConfig.githubURL} className="rounded-md transition-all duration-300 hover:scale-150"/>
@@ -45,18 +45,18 @@ export default function Resume() {
           <div className="grid grid-cols-2 mb-8">
             <PSubTitle className="mr-6">Machine Learning Frameworks</PSubTitle>
             <ul className="grid grid-cols-1 list-disc list-inside">
-              <li className="text-lg ml-4">PyTorch (고급, Expert)</li>
-              <li className="text-lg ml-4">Keras (중급, Proficient)</li>
-              <li className="text-lg ml-4">TensorFlow (초급, Intermediate)</li>
+              <li className="text-lg ml-4">PyTorch</li>
+              <li className="text-lg ml-4">Keras</li>
+              <li className="text-lg ml-4">TensorFlow</li>
             </ul>
           </div>
           <div className="grid grid-cols-2">
             <PSubTitle className="mr-6">Programming Languages</PSubTitle>
             <ul className="list-disc list-inside text-xl leading-relaxed">
-              <li className="text-lg ml-4">Python (고급, Expert)</li>
-              <li className="text-lg ml-4">Javascript (초급, Intermediate)</li>
-              <li className="text-lg ml-4">Java (초급, Intermediate)</li>
-              <li className="text-lg ml-4">SQL (초급, Intermediate)</li>
+              <li className="text-lg ml-4">Pytho</li>
+              <li className="text-lg ml-4">Javascript</li>
+              <li className="text-lg ml-4">Java</li>
+              <li className="text-lg ml-4">SQL</li>
             </ul>
           </div>
           <div className="grid grid-cols-2">
@@ -225,7 +225,6 @@ export default function Resume() {
         </div>
       </section>
 
-
       <div className="text-left w-full mb-8">
       <div className="flex border-b-4 justify-start items-center mb-4">
         <SpanBlue className="mr-2">EXPERIENCE</SpanBlue>
@@ -349,8 +348,7 @@ export default function Resume() {
               </div>
             </ul>
       </div>
-    </div>
-
+      </div>
     </div>
   );
 }

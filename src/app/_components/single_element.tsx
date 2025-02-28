@@ -18,7 +18,7 @@ export function SpanBold({ children, className }: Readonly<{children: React.Reac
 }
 
 export function SpanBlue({ children, className }: Readonly<{children: React.ReactNode, className?: string}>) {
-    const classNameMerged: string = twMerge("text-4xl text-blue-400 font-semibold w-fit", className);
+    const classNameMerged: string = twMerge("text-4xl text-blue-400 font-semibold", className);
     return <span className={classNameMerged}>{children}</span>;
 }
 
